@@ -23,6 +23,10 @@ Does OPTFF have the fewest misses? Yes, OPTFF proves to be the most effective al
 How does FIFO compare to LRU? LRU generally does at least equal or fewer misses to the FIFO algorithm. This is because FIFO just evicts the oldest item, rather than the one being the least frequently used - LRU is being smarter about which ID to evict.
 
 ### Question 2
+
+Consider the sequence : 1 2 3 1 4 2.
+At request 4, the LRU algorithm will choose to evict 2, as it is the least recently used item in our cache. Which will result in an additional miss directly after when 2 reappears. Howevever the OPT algorithm will evict either 1 or 3 as they are not used again in this sequence, preventing 2 from being evicted. The total miss count for LRU is 5, while the OPT algorithm only has 4 misses.
+
 ### Question 3
 $$
 \begin{aligned}
