@@ -1,6 +1,5 @@
 
 
-
 def find_next_use(r, item, current_index):
     for j in range(current_index + 1, len(r)):
         if r[j] == item:
