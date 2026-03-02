@@ -8,3 +8,5 @@ def generate_test(k, m, max_id=20, filename= "tests/test.txt"):
 
 
 generate_test(k=10, m = 50, filename="tests/test1.txt")
+generate_test(k=25, m=100,max_id=65, filename="tests/test2.txt")
+generate_test(k=35, m=250, max_id= 100,filename="tests/test3.txt")

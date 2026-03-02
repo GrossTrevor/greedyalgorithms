@@ -11,6 +11,17 @@ Python implementation of the FIFO (First-In, First-Out), LRU (Least Recently Use
 
 ## Written Component
 ### Question 1
+
+| File | k | m | FIFO | LRU | OPTFF |
+|------|---|---|------|-----|-------|
+| 1 | 10 | 50 | 28 | 24 | 20 |
+| 2 | 35 | 250 | 173 | 173 | 110 |
+| 3 | 25 | 100 | 78 | 74 | 53 |
+
+Does OPTFF have the fewest misses? Yes, OPTFF proves to be the most effective algorithm of the three tested. This is because it looks ahead on the input data and makes a perfect eviction choice.
+
+How does FIFO compare to LRU? LRU generally does at least equal or fewer misses to the FIFO algorithm. This is because FIFO just evicts the oldest item, rather than the one being the least frequently used - LRU is being smarter about which ID to evict.
+
 ### Question 2
 ### Question 3
 $$
