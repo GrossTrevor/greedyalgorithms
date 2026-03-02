@@ -4,12 +4,12 @@ def main():
     k, m, r = parse('data/input.in')
     fifo_misses = fifo.fifo(k, r)
     lru_misses = lru.LRU_Test(k, r)
-    # optff_misses = optff.optff(k, r)
+    optff_misses = optff.OPT_Test(k, r)
 
     with open('data/output.out', 'w') as file:
         file.write(f'FIFO  : {fifo_misses}\n')
         file.write(f'LRU  : {lru_misses}\n')
-        # file.write(f'OPTFF  : {optff_misses}\n')
+        file.write(f'OPTFF  : {optff_misses}\n')
 
 """
 Data will be in the following format:
