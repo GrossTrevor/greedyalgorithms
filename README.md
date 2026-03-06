@@ -7,7 +7,45 @@ Python implementation of the FIFO (First-In, First-Out), LRU (Least Recently Use
 
 ## Project Structure
 ```
+greedyalgorithms/
+├── src/
+│   ├── fifo.py    # Code and functions for FIFO algorithm
+│   ├── lru.py          # Code and functions for LRU algorithm
+│   ├── main.py          # Ingests input, runs algorithms, and creates output file
+│   ├── optff.py          # Code and functions for Belady's algorithm
+│   ├── q1.ipynb          # Used to answer written question 1
+│   └── test_generator.py       # Generate test cases and files
+├── data/                    # Input/Output test files
+└── tests/            # Input test files
 ```
+
+## Prerequisites
+* Python [version, e.g., 3.10+]
+
+### Data Formatting
+#### Input
+Input data must be placed into `data/input.in` and formatted as follows:
+```
+k m
+r1 r2 r3 ... rm
+```
+Where:
+* `k` = cache capacity (`k >= 1`)
+* `m` = number of requests
+* `r1 r2 r3 ... rm` = sequence of integer IDs
+
+#### Output
+Output data will be placed in `data/output.out` and formatted as follows:
+```
+FIFO  : <number_of_misses>
+LRU   : <number_of_misses>
+OPTFF : <number_of_misses>
+```
+
+## Running the Algorithms
+* Create input based on instructions above
+* Run the following command from the `greedyalgorithms/` directory: `python src/main.py`
+* Examine the output in the `data/output.out` file
 
 ## Written Component
 ### Question 1
